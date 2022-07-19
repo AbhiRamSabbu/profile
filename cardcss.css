@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  background-color: #d3e8e0;
+  padding: 20px;
+  text-align: center;
+}
+
+.left {
+  float: left;
+  width: 33.3%; /* The width is 20%, by default */
+  height: 300px;
+}
+
+.main {
+  float: left;
+  width: 33.3%; /* The width is 60%, by default */
+    height: 300px;
+}
+
+.right {
+  float: left;
+  width: 33.3%; /* The width is 20%, by default */
+    height: 300px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  float: left;
+  padding-bottom: 30px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-image: linear-gradient(
+    45deg,#e34282,#f12cf5);
+  color: white;
+  
+}
+
+.flip-card-back {
+  background-image: linear-gradient(
+    315deg,#e34282,#f12cf5);
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-front h2{
+  padding: 20px;
+  margin: 3px;
+  padding-top: 110px;
+}
+
+
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
