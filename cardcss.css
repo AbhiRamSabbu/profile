@@ -3,7 +3,7 @@
 }
 body{
   background-image: linear-gradient(
-    45deg,#3999ed,#63f011) ;
+    45deg,#e3a1d9,#a1e3d7) ;
 
 }
 .header {
@@ -31,6 +31,7 @@ body{
 }
 .flip-card {
   background-color: transparent;
+  border-radius: 20px;
   width: 100%;
   height: 300px;
   perspective: 1000px;
@@ -64,6 +65,7 @@ body{
   background-image: linear-gradient(
     45deg,#b134eb,#eb3499);
   color: white;
+
   
 }
 
